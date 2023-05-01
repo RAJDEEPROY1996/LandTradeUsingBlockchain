@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Registration</title>
+    <style>
+        
+        button{
+            background-color: lightgreen; 
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;;   
+        }
+        #connectDiv{
+            background-color: lightyellow;            
+        }
+        #registerDiv{
+            background-color: lightblue;
+        }
+        #listOfPlotByOwnerDiv{
+            background-color: lightskyblue;
+        }
+        #viewPlotDetailsDiv{
+            background-color: lightpink;
+        }
+        #transferLandDiv{
+            background-color: linen;
+        }
+    </style>
+</head>
+<body align="center">
+    <h1>Welcome to Land Record Department</h1>
+    <div id="connectDiv">
+        <br><p>This process will connect Metamask to the Dapp</p>
+        <button id = "walletConnect">Connect Wallet</button><br><br>
+    </div>
+    <div id="registerDiv">
+    <br><p>This process will Register Land in the Blockchain</p>
+    <form id="registerForm">
+        <h1>Land Register using plot Number</h1>
+        <label> Plot Number: <input type="text" id="plotNo" /> </label><br><br>
+        <label> Identity Card Number: <input type="text" id="aadharNo" /> </label><br><br>
+        <label> Block Name: <input type="text" id="blockName" /> </label><br><br>
+        <label> District Name: <input type="text" id="districtName" /> </label><br><br>
+        <label> State Name: <input type="text" id="stateName" /> </label><br><br>
+        <button type="submit">Register a Land</button><br><br>
+    </form>
+    </div>
+    <div id="listOfPlotByOwnerDiv">
+        <br><p>This process will List Down All the Plot Number hold by a Owner</p>
+        <form id="viewPlotNOForm">
+            <h1>Show plot Number by using Owner Identity</h1>
+            <label> Identity Card Number: <input type="text" id="idNo" /> </label><br><br>
+            <button type="submit">Search By Owner ID</button><br><br>
+        </form>
+    </div>
+    <div id="viewPlotDetailsDiv">
+        <br><p>This process will give details of the plot</p>
+        <form id="viewPlotDetails">
+            <h1>Show plot Number details using plot number</h1>
+            <label> Plot Number: <input type="text" id="plotNu" /> </label><br><br>
+            <button type="submit">Search Land By Plot ID</button><br><br>
+        </form>
+    </div>
+
+    <div id="transferLandDiv">
+        <br><p>This process will transfer Land</p>
+        <form id="landTransfer">
+            <h1>Transfer Land To a New Owner</h1>
+            <label> Identity Card Number: <input type="text" id="ownerId" /> </label><br><br>
+            <label> Plot Number: <input type="text" id="plotNum" /> </label><br><br>
+            <button type="submit">Search Land By Plot ID</button><br><br>
+        </form>
+    </div>
+
+    <div id="outputDiv">
+        <pre id="out"></pre>
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+    type="application/javascript"></script>
+  <script src="index.js" type="module"></script>
+
+</body>
+</html>
+
+  
